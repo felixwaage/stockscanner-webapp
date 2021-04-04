@@ -1,0 +1,1 @@
+sap.ui.define(["com/myorg/stockscanner/controller/BaseController"],function(o){"use strict";return o.extend("com.myorg.stockscanner.controller.MainView",{onInit:function(){console.log("test");var o=new sap.ui.model.json.JSONModel;o.loadData("http://localhost:8081/0.0.0.0:4004/recommendations").then(()=>{this.getView().setModel(o,"recommendations")}).catch(o=>console.log(o))}})});
